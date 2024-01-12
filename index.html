@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav" id="wrap">
+      <a href="#">Home</a>
+      <a href="#">Store</a>
+      <a href="#">Login</a>
+      <button id="close">close</button>
+    </div>
+    <button id="open">Open</button>
+  </body>
+
+  <script>
+    const open$ = document.getElementById("open");
+    const wrap$ = document.getElementById("wrap");
+    const close$ = document.getElementById("close");
+
+    open$.addEventListener("click", function () {
+      wrap$.classList.add("opened");
+    });
+
+    close$.addEventListener("click", function () {
+      wrap$.classList.remove("opened");
+    });
+  </script>
+</html>
